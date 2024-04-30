@@ -1,8 +1,8 @@
 const { Router } = require("express");
 
-const UsersController = require("../controllers/UsersController");
+const NotesController = require("../controllers/NotesController");
 
-const usersRoutes = Router();
+const notesRoutes = Router();
 
 /* function myMiddleware(request, response, next) {
     console.log("Você passou pelo MiddleWare...");
@@ -14,9 +14,8 @@ const usersRoutes = Router();
     next();
 } */
 
-const usersController = new UsersController();
+const notesController = new NotesController();
 
-usersRoutes.post("/", usersController.create);
-usersRoutes.put("/:id", usersController.update);
+notesRoutes.post("/:user_id", notesController.create);
 
-module.exports = usersRoutes;
+module.exports = notesRoutes;
