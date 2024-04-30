@@ -1,5 +1,4 @@
 const knex = require("../database/knex");
-const { link } = require("../routes");
 
 class NotesController {
     async create(request, response) {
@@ -57,10 +56,11 @@ class NotesController {
     };
 
     async index(request, response) {
-        const { user_id } = request.query;
+        const { user_id, title } = request.query;
 
         const notes = await knex("notes")
         .where({ user_id })
+        .whereLike("title", `%${title}%`)
         .orderBy("title");
 
         return response.json(notes)
