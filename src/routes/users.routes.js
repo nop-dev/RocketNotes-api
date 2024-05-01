@@ -4,7 +4,9 @@ const UsersController = require("../controllers/UsersController");
 
 const usersRoutes = Router();
 
-/* function myMiddleware(request, response, next) {
+/* Função feita em aula para compreensão de conceito, mas que acabou não sendo implementada na versão final...
+
+function myMiddleware(request, response, next) {
     console.log("Você passou pelo MiddleWare...");
 
     if(!request.body.isAdmin) {
@@ -12,7 +14,7 @@ const usersRoutes = Router();
     };
 
     next();
-} */
+}; */
 
 const usersController = new UsersController();
 

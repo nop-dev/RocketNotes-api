@@ -4,7 +4,9 @@ const NotesController = require("../controllers/NotesController");
 
 const notesRoutes = Router();
 
-/* function myMiddleware(request, response, next) {
+/* Função feita em aula para compreensão de conceito, mas que acabou não sendo implementada na versão final...
+
+function myMiddleware(request, response, next) {
     console.log("Você passou pelo MiddleWare...");
 
     if(!request.body.isAdmin) {
@@ -12,7 +14,7 @@ const notesRoutes = Router();
     };
 
     next();
-} */
+}; */
 
 const notesController = new NotesController();
 

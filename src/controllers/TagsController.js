@@ -7,8 +7,8 @@ class TagsControler {
         const tags = await knex("tags")
         .where({ user_id });
 
-        return response.json(tags)
-    }
-}
+        return response.json(tags);
+    };
+};
 
 module.exports = TagsControler;
